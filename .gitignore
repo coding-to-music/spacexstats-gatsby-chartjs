@@ -11,3 +11,4 @@ dist/index.html
 dist/*.js
 *.retry
 stats.json
+.vercel
