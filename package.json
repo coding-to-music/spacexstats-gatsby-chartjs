@@ -9,7 +9,8 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "deploy": "git add . && git commit -m Build && git push ",
+    "vercel": "vercel --prod",
+    "deploy": "git add . && git commit -m Build && git push",
     "test:lint": "eslint --fix .",
     "test:tsc": "tsc",
     "test": "yarn test:tsc && yarn test:lint"
