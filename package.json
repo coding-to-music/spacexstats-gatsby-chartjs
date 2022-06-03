@@ -1,5 +1,5 @@
 {
-  "name": "spacexstats",
+  "name": "spacexstats-gatsby-chartjs",
   "version": "1.0.0",
   "description": "SpaceX Stats is the ultimate place to keep track of SpaceX's achievements into providing cheaper access to space and making human life multiplanetary.",
   "author": "Albéric Trancart",
@@ -9,6 +9,7 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
+    "deploy": "git add . && git commit -m Build && git push ",
     "test:lint": "eslint --fix .",
     "test:tsc": "tsc",
     "test": "yarn test:tsc && yarn test:lint"

@@ -1,3 +1,39 @@
+# spacexstats-gatsby-chartjs
+
+SpaceX Stats is the ultimate place to keep track of SpaceX's achievements into providing cheaper access to space and making human life multiplanetary.
+
+# 🚀 Javascript full-stack 🚀
+
+https://github.com/coding-to-music/spacexstats-gatsby-chartjs
+
+https://spacexstats-gatsby-chartjs.vercel.app
+
+From / By Albéric Trancart https://github.com/AlbericTrancart
+
+https://alberic.trancart.net/2018/09/spacex-stats/
+
+https://www.spacexstats.xyz
+
+https://github.com/r-spacex/spacexstats-react
+
+## Environment Values
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/spacexstats-gatsby-chartjs.git
+git push -u origin main
+```
+
 <p align="center"><img src="https://live.staticflickr.com/65535/50906488186_bd1cbc6d01_h.jpg" alt=""></p>
 
 <h1 align="center">SpaceXStats <br /><a href="https://www.spacexstats.xyz/">https://www.spacexstats.xyz/</a></h1>

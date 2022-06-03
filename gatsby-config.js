@@ -1,4 +1,4 @@
-const siteUrl = `https://www.spacexstats.xyz`;
+const siteUrl = `https://spacexstats-gatsby-chartjs.vercel.app`;
 
 module.exports = {
   siteMetadata: {
@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-108091199-1`,
+        trackingId: `G-QDTGQH3BTW`,
         head: false,
       },
     },
