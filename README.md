@@ -16,6 +16,12 @@ https://www.spacexstats.xyz
 
 https://github.com/r-spacex/spacexstats-react
 
+### example API call:
+
+GET https://api.spacexdata.com/v4/launches/latest
+
+https://github.com/r-spacex/SpaceX-API
+
 ## Environment Values
 
 ```java
