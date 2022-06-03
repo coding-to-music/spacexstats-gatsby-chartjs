@@ -32,7 +32,7 @@ const Root: React.FC<SpaceXData> = (data) => {
       return;
     }
 
-    ReactGA.initialize('UA-108091199-1');
+    ReactGA.initialize('G-QDTGQH3BTW');
     ReactGA.pageview('/');
 
     if (window.location.hash !== '') {
