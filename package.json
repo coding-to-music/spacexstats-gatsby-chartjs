@@ -37,6 +37,7 @@
     "gatsby-plugin-sitemap": "^5.0.0",
     "gatsby-plugin-styled-components": "^5.0.0",
     "gatsby-plugin-typescript": "^4.0.0",
+    "gatsby-plugin-vercel": "^1.0.3",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-sharp": "^4.0.0",
     "hammerjs": "^2.0.8",
