@@ -65,14 +65,6 @@ module.exports = {
         icon: `static/oglogo.jpg`,
       },
     },
-    // Sentry
-    {
-      resolve: 'gatsby-plugin-sentry',
-      options: {
-        dsn: 'https://bc2a7780fbd34ae89e414449540d47eb@o1243042.ingest.sentry.io/6470611',
-        sampleRate: 1.0,
-      },
-    },
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-netlify`,
   ],
