@@ -67,11 +67,10 @@ module.exports = {
     },
     // Sentry
     {
-      resolve: "@sentry/gatsby",
+      resolve: 'gatsby-plugin-sentry',
       options: {
-        dsn: "https://bc2a7780fbd34ae89e414449540d47eb@o1243042.ingest.sentry.io/6470611",
+        dsn: 'https://bc2a7780fbd34ae89e414449540d47eb@o1243042.ingest.sentry.io/6470611',
         sampleRate: 1.0,
-        release: process.env.SENTRY_RELEASE,
       },
     },
     `gatsby-plugin-remove-serviceworker`,
