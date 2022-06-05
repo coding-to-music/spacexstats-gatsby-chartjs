@@ -70,7 +70,8 @@ module.exports = {
       resolve: "@sentry/gatsby",
       options: {
         dsn: "https://bc2a7780fbd34ae89e414449540d47eb@o1243042.ingest.sentry.io/6470611",
-        sampleRate: 0.7,
+        sampleRate: 1.0,
+        release: process.env.SENTRY_RELEASE,
       },
     },
     `gatsby-plugin-remove-serviceworker`,
