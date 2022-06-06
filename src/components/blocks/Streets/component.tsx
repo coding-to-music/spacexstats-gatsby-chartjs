@@ -19,11 +19,9 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
   const tabs = [
     {
       id: 'per-year',
-      label: 'Per Year',
+      label: 'Tab One',
       background: 'barcelona-center-bike-lane-green.jpg',
-      // background: 'barcelona-center-bike-lane-trees.jpeg',
-      // background: 'columbia-center-bike-lane.jpg',
-      title: 'Per Year',
+      title: 'Tab One',
       render: (
         <>
           <SectionContent>
@@ -42,9 +40,9 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
     },
     {
       id: 'per-rocket',
-      label: 'Per Rocket',
-      background: 'iridium1.jpg',
-      title: 'Per Rocket',
+      label: 'Tab Two',
+      background: 'barcelona-center-bike-lane-trees.jpeg',
+      title: 'Tab Two',
       render: (
         <>
           <SectionContent>
@@ -62,9 +60,9 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
     },
     {
       id: 'per-launchpad',
-      label: 'Per Launchpad',
-      background: 'capeflorida.jpg',
-      title: 'Per Launchpad',
+      label: 'Tab Three',
+      background: 'columbia-center-bike-lane.jpg',
+      title: 'Tab Three',
       render: (
         <>
           <SectionContent>
@@ -84,9 +82,9 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
     },
     {
       id: 'success-rate',
-      label: 'Success Rate',
-      background: 'ses10.jpg',
-      title: 'Success Rate',
+      label: 'Tab Four',
+      background: 'columbia-center-bike-lane.jpg',
+      title: 'Tab Four',
       render: (
         <>
           <SectionContent>
