@@ -15,6 +15,7 @@ export type NavigationState = Readonly<{
   starship: string | null;
   timelines: string | null;
   about: string | null;
+  streets: string | null;
 }>;
 
 const initialState: NavigationState = {
@@ -29,6 +30,7 @@ const initialState: NavigationState = {
   starship: null,
   timelines: null,
   about: null,
+  streets: null,
 };
 
 export type SectionId = keyof NavigationState;

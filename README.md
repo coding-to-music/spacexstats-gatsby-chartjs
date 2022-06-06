@@ -44,11 +44,13 @@ git push -u origin main
 
 Files to modify:
 
-src --> images --> backgrounds --> new images
-src --> components --> nlocks --> new blocks
-src --> components --> types --> index.ts
-src --> redux --> navigation.ts
-src --> pages --> index.tsx
+src/images/backgrounds/(new images)
+src/components/blocks/(new blocks directory)
+src/components/blocks/index.ts (export)
+src/components/ui/Root.tsx (import and section component array)
+src/types/index.ts (enums)
+src/redux/navigation.ts (navigation type and array)
+src/pages/index.tsx (types, props, GraphQL Query)
 
 <p align="center"><img src="https://live.staticflickr.com/65535/50906488186_bd1cbc6d01_h.jpg" alt=""></p>
 

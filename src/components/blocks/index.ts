@@ -9,3 +9,4 @@ export { default as Starlink } from './Starlink';
 export { default as Starship } from './Starship';
 export { default as Timelines } from './Timelines';
 export { default as Upcoming } from './Upcoming';
+export { default as Streets } from './Streets';

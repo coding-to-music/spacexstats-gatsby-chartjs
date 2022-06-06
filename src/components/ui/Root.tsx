@@ -15,6 +15,7 @@ import {
   Starship,
   Timelines,
   Upcoming,
+  Streets,
 } from 'components/blocks';
 import StyleReset from 'components/ui/StyleReset';
 import { getScrollPercentage, scrollTo, updateSectionUrl } from 'utils/scroll';
@@ -74,6 +75,7 @@ const Root: React.FC<SpaceXData> = (data) => {
     { id: 'dragon', Component: Dragon },
     { id: 'people', Component: People },
     { id: 'timelines', Component: Timelines },
+    { id: 'streets', Component: Streets },
   ];
 
   return (
