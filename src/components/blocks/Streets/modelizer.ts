@@ -23,15 +23,24 @@ export interface ModelizedSectionData {
     options: ChartOptions;
   };
   totalLaunchCount: number;
+  dragonriders: number;
+  employees: number;
 }
 
 export const modelizer = ({
   pastLaunches,
   upcomingLaunches,
+  crew,
+  company,
 }: SpaceXData): ModelizedSectionData => ({
   launchesPerYear: buildLaunchesPerYearChart(pastLaunches, upcomingLaunches),
   launchesPerRocket: buildLaunchesPerRocketChart(pastLaunches),
   launchesPerLaunchpad: buildLaunchesPerLaunchpadChart(pastLaunches),
   successRates: buildSuccessRateChart(pastLaunches),
   totalLaunchCount: pastLaunches.length,
+  dragonriders: crew.reduce(
+    (sum, currentCrew) => sum + currentCrew.launches.length,
+    0,
+  ),
+  employees: company.employees,
 });

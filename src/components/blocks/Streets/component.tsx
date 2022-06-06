@@ -15,6 +15,8 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
     launchesPerLaunchpad,
     successRates,
     totalLaunchCount,
+    dragonriders,
+    employees,
   } = modelizer(data);
 
   const tabs = [
@@ -114,6 +116,36 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
             version of the Dragon cargo vehicle launched atop Falcon Heavy
             rockets.`}
           </SectionDescription>
+        </>
+      ),
+    },
+    {
+      id: 'dragonriders',
+      label: 'Dragonriders',
+      background: 'dragonriders.jpg',
+      title: 'Dragonriders',
+      render: (
+        <>
+          <SectionContent>
+            <IntegerStat value={dragonriders} subtitle="People" />
+          </SectionContent>
+          <SectionDescription>
+            {`Dragon 2, developed as part of NASA's Commercial Crew Transportation
+            Capability (CCtCap) program, flew for the first time in May 2020. ${dragonriders} different people were sent to space by SpaceX`}
+          </SectionDescription>
+        </>
+      ),
+    },
+    {
+      id: 'employees',
+      label: 'Employees',
+      background: 'tankland.jpg',
+      title: 'Employees',
+      render: (
+        <>
+          <SectionContent>
+            <IntegerStat value={employees} subtitle="People" />
+          </SectionContent>
         </>
       ),
     },
