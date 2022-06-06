@@ -48,7 +48,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `G-QDTGQH3BTW`,
-        head: false,
+        head: true,
+        // head: false,
       },
     },
 
@@ -66,7 +67,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-remove-serviceworker`,
-    `gatsby-plugin-netlify`,
+    {
+      resolve: 'gatsby-plugin-vercel',
+      options: {
+        // (optional) Prints metrics in the console when true
+        debug: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
