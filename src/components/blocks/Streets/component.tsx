@@ -19,10 +19,10 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
 
   const tabs = [
     {
-      id: 'per-year',
-      label: 'Tab One',
+      id: 'bar-chart',
+      label: 'Bar Chart',
       background: 'barcelona-center-bike-lane-green.jpg',
-      title: 'Tab One',
+      title: 'Bar Chart',
       render: (
         <>
           <SectionContent>
@@ -40,10 +40,10 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
       ),
     },
     {
-      id: 'per-rocket',
-      label: 'Tab Two',
+      id: 'donut-chart',
+      label: 'Donut Chart',
       background: 'barcelona-center-bike-lane-trees.jpeg',
-      title: 'Tab Two',
+      title: 'Donut Chart',
       render: (
         <>
           <SectionContent>
@@ -60,10 +60,10 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
       ),
     },
     {
-      id: 'per-launchpad',
-      label: 'Tab Three',
+      id: 'another-donut',
+      label: 'Another Donut',
       background: 'columbia-center-bike-lane.jpg',
-      title: 'Tab Three',
+      title: 'Another Donut',
       render: (
         <>
           <SectionContent>
@@ -82,10 +82,10 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
       ),
     },
     {
-      id: 'success-rate',
-      label: 'Tab Four',
+      id: 'line-chart',
+      label: 'Line Chart',
       background: 'columbia-center-bike-lane.jpg',
-      title: 'Tab Four',
+      title: 'Line Chart',
       render: (
         <>
           <SectionContent>
@@ -99,10 +99,10 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
       ),
     },
     {
-      id: 'dragonxl',
-      label: 'Dragon XL',
+      id: 'integer-stat',
+      label: 'Integer Stat',
       background: 'columbia-center-bike-lane.jpg',
-      title: 'Dragon XL',
+      title: 'Integer Stat',
       render: (
         <>
           <SectionContent>

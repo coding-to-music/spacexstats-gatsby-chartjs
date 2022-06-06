@@ -22,8 +22,8 @@ const Upcoming: React.FC<BlockProps> = ({ data, ...rest }) => {
 
   const tabs = [
     {
-      id: 'next',
-      label: 'Tab One',
+      id: 'countdown',
+      label: 'Countdown',
       background: 'barcelona-center-bike-lane-green.jpg',
       title: nextLaunch.mission,
       render: (
@@ -37,11 +37,11 @@ const Upcoming: React.FC<BlockProps> = ({ data, ...rest }) => {
       ),
     },
     {
-      id: 'next-launches',
-      label: 'Tab Two',
+      id: 'table',
+      label: 'Table Grid',
       background: 'barcelona-center-bike-lane-trees.jpeg',
       // background: 'columbia-center-bike-lane.jpg',
-      title: 'Tab Two',
+      title: 'Table Grid',
       render: (
         <SectionContent>
           <TableContainer>
