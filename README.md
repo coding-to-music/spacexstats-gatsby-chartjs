@@ -40,6 +40,16 @@ git remote add origin git@github.com:coding-to-music/spacexstats-gatsby-chartjs.
 git push -u origin main
 ```
 
+## Creating my own sections
+
+Files to modify:
+
+src --> images --> backgrounds --> new images
+src --> components --> nlocks --> new blocks
+src --> components --> types --> index.ts
+src --> redux --> navigation.ts
+src --> pages --> index.tsx
+
 <p align="center"><img src="https://live.staticflickr.com/65535/50906488186_bd1cbc6d01_h.jpg" alt=""></p>
 
 <h1 align="center">SpaceXStats <br /><a href="https://www.spacexstats.xyz/">https://www.spacexstats.xyz/</a></h1>
