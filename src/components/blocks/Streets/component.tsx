@@ -99,7 +99,7 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
     },
   ];
 
-  return <Section title="Launch History" tabs={tabs} {...rest} />;
+  return <Section title="Streets" tabs={tabs} {...rest} />;
 };
 
 export default LauncHistory;
