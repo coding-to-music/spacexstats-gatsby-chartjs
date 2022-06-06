@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bar, Doughnut, Line } from 'react-chartjs-2';
+import IntegerStat from 'components/ui/IntegerStat';
 import Section, {
   SectionContent,
   SectionDescription,
@@ -93,6 +94,25 @@ const LauncHistory: React.FC<BlockProps> = ({ data, ...rest }) => {
           <SectionDescription>
             {`In order to provide a reliable access to space, SpaceX will have to beat
             every other provider with its success rate.`}
+          </SectionDescription>
+        </>
+      ),
+    },
+    {
+      id: 'dragonxl',
+      label: 'Dragon XL',
+      background: 'columbia-center-bike-lane.jpg',
+      title: 'Dragon XL',
+      render: (
+        <>
+          <SectionContent>
+            <IntegerStat value={0} subtitle="Flights" />
+          </SectionContent>
+          <SectionDescription>
+            {`In March 2020, NASA has selected SpaceX to deliver supplies to the
+            planned Gateway mini-space station in lunar orbit using a new
+            version of the Dragon cargo vehicle launched atop Falcon Heavy
+            rockets.`}
           </SectionDescription>
         </>
       ),
