@@ -12,10 +12,10 @@ const MoreCharts: React.FC<BlockProps> = ({ data, ...rest }) => {
   const { inSpace, launchRate, deorbited } = modelizer(data);
   const tabs = [
     {
-      id: 'in-space',
-      label: 'In Space',
+      id: 'line-chart',
+      label: 'Line Chart',
       background: 'starlink.jpg',
-      title: 'In Space',
+      title: 'Line Chart',
       render: (
         <>
           <SectionContent>
@@ -33,10 +33,10 @@ const MoreCharts: React.FC<BlockProps> = ({ data, ...rest }) => {
       ),
     },
     {
-      id: 'launch-rate',
-      label: 'Launch Rate',
+      id: 'bar-chart',
+      label: 'Bar Chart',
       background: 'starlink.jpg',
-      title: 'Launch Rate',
+      title: 'Bar Chart',
       render: (
         <>
           <SectionContent>
@@ -52,10 +52,10 @@ const MoreCharts: React.FC<BlockProps> = ({ data, ...rest }) => {
       ),
     },
     {
-      id: 'deorbited',
-      label: 'Deorbited',
+      id: 'single-number',
+      label: 'Single Number',
       background: 'starlink.jpg',
-      title: 'Deorbited',
+      title: 'Single Number',
       render: (
         <>
           <SectionContent>
