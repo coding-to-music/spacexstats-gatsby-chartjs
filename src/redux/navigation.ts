@@ -17,6 +17,7 @@ export type NavigationState = Readonly<{
   about: string | null;
   streets: string | null;
   morestreets: string | null;
+  morecharts: string | null;
 }>;
 
 const initialState: NavigationState = {
@@ -33,6 +34,7 @@ const initialState: NavigationState = {
   about: null,
   streets: null,
   morestreets: null,
+  morecharts: null,
 };
 
 export type SectionId = keyof NavigationState;

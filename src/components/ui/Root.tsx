@@ -17,6 +17,7 @@ import {
   Upcoming,
   Streets,
   MoreStreets,
+  MoreCharts,
 } from 'components/blocks';
 import StyleReset from 'components/ui/StyleReset';
 import { getScrollPercentage, scrollTo, updateSectionUrl } from 'utils/scroll';
@@ -78,6 +79,7 @@ const Root: React.FC<SpaceXData> = (data) => {
     { id: 'timelines', Component: Timelines },
     { id: 'streets', Component: Streets },
     { id: 'morestreets', Component: MoreStreets },
+    { id: 'morecharts', Component: MoreCharts },
   ];
 
   return (

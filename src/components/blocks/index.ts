@@ -11,3 +11,4 @@ export { default as Timelines } from './Timelines';
 export { default as Upcoming } from './Upcoming';
 export { default as Streets } from './Streets';
 export { default as MoreStreets } from './MoreStreets';
+export { default as MoreCharts } from './MoreCharts';
