@@ -1,7 +1,12 @@
+import { ChartOptions, ChartData } from 'chart.js';
 import format from 'date-fns/format';
 import getQuarter from 'date-fns/getQuarter';
 import { fromUnix } from 'utils/date';
 import { launchYear, getPayloads, getPayload } from 'utils/launch';
+import endOfMonth from 'date-fns/endOfMonth';
+import eachMonthOfInterval from 'date-fns/eachMonthOfInterval';
+import { chartColors } from 'stylesheet';
+
 import {
   Launch,
   SpaceXData,
@@ -9,6 +14,7 @@ import {
   Rocket,
   Payload,
   Launchpad,
+  Starlink,
 } from 'types';
 
 export interface ModelizedUpcomingLaunch {
@@ -27,7 +33,86 @@ export interface ModelizedSectionData {
     description: string;
   };
   nextLaunches: ModelizedUpcomingLaunch[];
+  inSpace: {
+    data: ChartData;
+    options: ChartOptions;
+  };
 }
+
+const FIRST_STARLINK_LAUNCH = new Date('2019-05-24');
+const MONTH_FORMAT = 'MM-yyyy';
+export const buildInSpaceChart = (starlinks: Starlink[]) => {
+  const months = eachMonthOfInterval({
+    start: FIRST_STARLINK_LAUNCH,
+    end: new Date(),
+  });
+
+  const data = {
+    labels: months.map((month) => format(month, MONTH_FORMAT)),
+    datasets: [
+      {
+        label: 'In Space',
+        type: 'line',
+        data: months.map(
+          (month) =>
+            starlinks.filter(
+              ({ spaceTrack: { LAUNCH_DATE } }) =>
+                new Date(LAUNCH_DATE).getTime() < endOfMonth(month).getTime(),
+            ).length -
+            starlinks.filter(
+              ({ spaceTrack: { DECAY_DATE } }) =>
+                DECAY_DATE &&
+                new Date(DECAY_DATE).getTime() < endOfMonth(month).getTime(),
+            ).length,
+        ),
+        lineTension: 0,
+        fill: false,
+        borderColor: chartColors.blue,
+        backgroundColor: chartColors.blue,
+      },
+      {
+        label: 'US and Canada coverage',
+        type: 'line',
+        data: months.map(() => 720),
+        lineTension: 0,
+        fill: false,
+        borderColor: chartColors.red,
+        pointRadius: 0,
+      },
+      {
+        label: 'Global coverage',
+        type: 'line',
+        data: months.map(() => 1440),
+        lineTension: 0,
+        fill: false,
+        borderColor: chartColors.yellow,
+        pointRadius: 0,
+      },
+      {
+        label: 'Constellation complete',
+        type: 'line',
+        data: months.map(() => 4400),
+        lineTension: 0,
+        fill: false,
+        borderColor: chartColors.green,
+        pointRadius: 0,
+      },
+    ],
+  };
+
+  const customOptions: ChartOptions = {
+    tooltips: {
+      callbacks: {
+        label: (tooltipItem) => {
+          const dataset = data.datasets[tooltipItem.datasetIndex!];
+          return tooltipItem.yLabel
+            ? `${dataset.label}: ${tooltipItem.yLabel as number} sats`
+            : '';
+        },
+      },
+    },
+  };
+
 
 const displayLaunchTime = (date: Date, precision: LaunchDatePrecision) => {
   switch (precision) {
@@ -216,5 +301,6 @@ export const modelizer = ({
       vehicle: rockets.find((rocket) => rocket.id === nextLaunch.rocket)!.name,
       launchpad: launchpads.find((pad) => pad.id === launch.launchpad)!.name,
     })),
+    inSpace: buildInSpaceChart(starlink),
   };
 };

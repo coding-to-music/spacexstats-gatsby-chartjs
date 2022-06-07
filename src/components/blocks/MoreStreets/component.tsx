@@ -16,9 +16,10 @@ import {
 import TimeStat from 'components/ui/TimeStat';
 import { modelizer, ModelizedUpcomingLaunch } from './modelizer';
 import { BlockProps } from 'types';
+import { Line } from 'react-chartjs-2';
 
 const Upcoming: React.FC<BlockProps> = ({ data, ...rest }) => {
-  const { nextLaunch, nextLaunches } = modelizer(data);
+  const { nextLaunch, nextLaunches, inSpace } = modelizer(data);
 
   const tabs = [
     {
@@ -87,6 +88,27 @@ const Upcoming: React.FC<BlockProps> = ({ data, ...rest }) => {
             </Table>
           </TableContainer>
         </SectionContent>
+      ),
+    },
+    {
+      id: 'in-space',
+      label: 'In Space',
+      background: 'starlink.jpg',
+      title: 'In Space',
+      render: (
+        <>
+          <SectionContent>
+            <Line data={inSpace.data} options={inSpace.options} />
+          </SectionContent>
+          <SectionDescription>
+            {`SpaceX is developing a low latency, broadband internet system to
+            meet the needs of consumers across the globe. Enabled by a
+            constellation of low Earth orbit satellites, Starlink will provide
+            fast, reliable internet to populations with little or no
+            connectivity, including those in rural communities and places where
+            existing services are too expensive or unreliable.`}
+          </SectionDescription>
+        </>
       ),
     },
   ];
